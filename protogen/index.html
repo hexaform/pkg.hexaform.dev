@@ -4,7 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="go-import" content="pkg.hexaform.dev/protogen git https://github.com/hexaform/protoc-gen-go-eventstream" />
 
-    <title>Go Packages</title>
+    <title>Go Packages - protoc-gen-go-eventstream</title>
+
+    <!-- GitHub-style markdown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css" integrity="sha512-BrOPA520KmDMqieeM7XFe6a3u3Sb3F1JBaQnrIAmWg3EYrciJ+Qqe6ZcKCdfPv26rGcgTrJnZ/IdQEct8h3Zhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            max-width: 980px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+    </style>
 </head>
-<body></body>
+<body>
+    <main id="content" class="markdown-body">protoc-gen-go-eventstream</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        fetch("https://raw.githubusercontent.com/hexaform/protoc-gen-go-eventstream/refs/heads/main/README.md")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to load README");
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById("content").innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                document.getElementById("content").textContent = error.message;
+            });
+    </script>
+</body>
 </html>
